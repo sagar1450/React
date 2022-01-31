@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-function Home(props) {
-    console.log('home',props.cardData);
-    return (
-       
+function Home(props) {  
+    return (       
         <div>           
              <h1>Home component</h1>
              <div className="cart-wrapper"> 
