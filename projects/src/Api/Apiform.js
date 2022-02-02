@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function Apiform() {
+    const [data, setData] = useState([]);
     const [category, setCategory] = useState("");
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
@@ -27,8 +28,8 @@ function Apiform() {
     }
     return (
         <div>
+          
             <h1>Form</h1>
-
             <input type="text" value={title} onChange={(e) => { setTitle(e.target.value) }} name="title" /><br />
             <input type="text" value={category} onChange={(e) => { setCategory(e.target.value) }} name="category" /><br />
             <input type="text" value={price} onChange={(e) => { setPrice(e.target.value) }} name="price" /><br />
