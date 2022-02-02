@@ -1,0 +1,45 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "product1",
+      "category": "electronics",
+      "price": 4000,
+      "discription": "product1"
+    },
+    {
+      "id": 2,
+      "title": "product2",
+      "category": "electronics",
+      "price": 5000,
+      "discription": "product2"
+    },
+    {
+      "id": 11,
+      "title": "product11",
+      "category": "electronics",
+      "price": 5000,
+      "discription": "product11"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "rating": 3,
+      "comment": "review 1 for product id 1 ",
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "rating": 4,
+      "comment": "review 2 for product id 1 ",
+      "productId": 1
+    },
+    {
+      "id": 3,
+      "rating": 4,
+      "comment": "review 3 for product id 2  ",
+      "productId": 2
+    }
+  ]
+}
