@@ -2,21 +2,23 @@ import React, { useState, useEffect } from "react";
 
 function Api() {
     const [data, setData] = useState([]);
-    const [userId, setUserId] = useState("");
+    const [category, setCategory] = useState("");
     const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
-    const [usersId,setUsersId]=useState(null);
+    const [price, setPrice] = useState("");
+    const [discription, setDiscription] = useState("");
+    const [usersId, setUsersId] = useState(null);
     useEffect(() => {
         getList()
     }, [])
 
     function getList() {
-        fetch("https://jsonplaceholder.typicode.com/posts").then((result) => {
+        fetch("http://localhost:4000/products").then((result) => {
             result.json().then((resp) => {
                 setData(resp)
-                setUserId(resp[0].userId)
-                setTitle(resp[0].title)
-                setBody(resp[0].body)
+                setCategory(resp[0].title)
+                setTitle(resp[0].category)
+                setPrice(resp[0].price)
+                setDiscription(resp[0].discription)
                 setUsersId(resp[0].id)
             })
         })
@@ -24,7 +26,7 @@ function Api() {
 
     function deleteUser(id) {
 
-        fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+        fetch(`http://localhost:4000/products/${id}`, {
             method: 'DELETE',
 
         }).then((result) => {
@@ -33,59 +35,69 @@ function Api() {
                 getList()
             })
         })
+        
     }
 
     function selectUser(id) {
-        setUserId(data[id - 1].userId)
         setTitle(data[id - 1].title)
-        setBody(data[id - 1].body)
-        setUsersId(data[id-1].id)
+        setCategory(data[id - 1].category)
+        setPrice(data[id - 1].price)
+        setDiscription(data[id - 1].discription)
+        setUsersId(data[id - 1].id)
     }
 
-    function update(){
-        let datas={userId,title,body,usersId}
+    function update() {
+        let datas = {  title, category,price,discription, usersId }
 
         console.log(datas);
 
-        fetch(`https://jsonplaceholder.typicode.com/posts/${usersId}`,{
-            method:'PUT',
-            headers:{
-                'Accept':'application/json',
-                'Content-Type':'application/json'
+        fetch(`http://localhost:4000/products/${usersId}`, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             },
-            body:JSON.stringify(datas)
-        }).then((result)=>{
-            result.json().then((resp)=>{
+            body: JSON.stringify(datas)
+        }).then((result) => {
+            result.json().then((resp) => {
                 console.log(resp)
             })
         })
+        alert("data updated")
     }
 
     return (
         <div style={{ display: "flex" }}>
             <table border="1">
-                <tr>
-                    <td>UserId</td>
+                <tbody>
+                <tr>                   
                     <td>Id</td>
                     <td>Title</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                    <td>Discription</td>
                 </tr>
                 {
                     data.map((item) =>
-                        <tr>
-                            <td>{item.userId}</td>
+                        <tr>                          
                             <td>{item.id}</td>
                             <td>{item.title}</td>
+                            <td>{item.category}</td>
+                            <td>{item.price}</td>
+                            <td>{item.discription}</td>
                             <td><button onClick={() => deleteUser(item.id)} >Delete</button></td>
                             <td><button onClick={() => selectUser(item.id)} >Update</button></td>
                         </tr>
                     )
                 }
+                </tbody>
             </table>
-            <div style={{ margin: "5% 20%" }}>
-                <input type="text" value={userId} onChange={(e) => { setUserId(e.target.value) }} name="userId" /><br /><br />
+            <div style={{ margin: "5% 20%" }}>                
                 <input type="text" value={title} onChange={(e) => { setTitle(e.target.value) }} name="title" /><br /><br />
-                <input type="text" value={body} onChange={(e) => { setBody(e.target.value) }} name="body" /><br /><br />
-                <button onClick={()=>update()} >Save User</button>
+                <input type="text" value={category} onChange={(e) => { setCategory(e.target.value) }} name="category" /><br /><br />
+                <input type="text" value={price} onChange={(e) => { setPrice(e.target.value) }} name="price" /><br /><br />
+                <input type="text" value={discription} onChange={(e) => { setDiscription(e.target.value) }} name="discription" /><br /><br />
+                <button onClick={() => update()} >Save User</button>
             </div>
         </div>
     )
