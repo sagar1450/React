@@ -44,7 +44,7 @@ function App() {
       {/* <UseRef /> */}
       {/* <Hoc /> */}
       {/* <Routing /> */}
-      {/* <Api /> */}
+      <Api /><br /><br /><br />
       <Apiform />
     </div>
   );

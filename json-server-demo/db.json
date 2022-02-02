@@ -1,49 +1,32 @@
 {
   "products": [
     {
-      "title": "product2",
+      "title": "product12",
       "category": "electronics",
-      "price": "4000",
-      "discription": "product2",
-      "usersId": 2,
+      "price": "2000",
+      "discription": "product12",
       "id": 2
-    },
-    {
-      "title": "product11",
-      "category": "electronics",
-      "price": "6000",
-      "discription": "product11",
-      "usersId": 11,
-      "id": 11
-    },
-    {
-      "title": "product12",
-      "category": "electronics",
-      "price": "2000",
-      "discription": "product12",
-      "id": 12
-    },
-    {
-      "title": "product12",
-      "category": "electronics",
-      "price": "2000",
-      "discription": "product12",
-      "id": 13
     },
     {
       "title": "product13",
       "category": "electronics",
       "price": "2000",
       "discription": "product13",
-      "id": 14
-    }
-  ],
-  "reviews": [
+      "id": 3
+    },
     {
-      "id": 3,
-      "rating": 4,
-      "comment": "review 3 for product id 2  ",
-      "productId": 2
+      "title": "product14",
+      "category": "electronics",
+      "price": "3000",
+      "discription": "product14",
+      "id": 4
+    },
+    {
+      "title": "product15",
+      "category": "electronics",
+      "price": "3500",
+      "discription": "product15",
+      "id": 5
     }
   ]
 }
