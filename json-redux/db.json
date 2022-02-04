@@ -1,0 +1,22 @@
+{
+    "user":[
+        {
+            "name":"sagar",
+            "address":"india",
+            "email":"sagarrathod539@gmail.com",
+            "id":1
+        },
+        {
+            "name":"ganesh",
+            "address":"india",
+            "email":"ganeshrathod539@gmail.com",
+            "id":2
+        },
+        {
+            "name":"dilip",
+            "address":"india",
+            "email":"diliprathod539@gmail.com",
+            "id":3
+        }
+    ]
+}
