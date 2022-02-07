@@ -5,7 +5,7 @@ import { buyCake } from '../redux/cake/cakeAction'
 function HooksCakeContainer () {
   const numOfCakes = useSelector(state => state.cake.numOfCakes)
   const dispatch = useDispatch()
-  return (
+  return ( 
     <div>
       <h2>Number of cakes - {numOfCakes} </h2>
       <button onClick={() => dispatch(buyCake())}>Buy Cake</button>
