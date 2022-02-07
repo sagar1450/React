@@ -14,10 +14,10 @@ function Routing() {
     return (
         <div>
             <h1>Routing</h1>
-            {/* <Router> */}
-              {/* <Nav /> */}
-                {/* <Routes> */}
-                    {/* <Route path='/' element={< Home />}></Route>
+            <Router>
+              <Nav />
+                <Routes>
+                    <Route path='/' element={< Home />}></Route>
                     <Route path='/about' element={< About />}></Route>
                     <Route path='/order-summary' element={< OrderSummary />}></Route>
                     <Route path='/product' element={< Product />}>
@@ -27,12 +27,12 @@ function Routing() {
                     </Route>    
                     <Route path='/users' element={< Users />}>  </Route>  
                     <Route path='/users/:userid' element={< UserDeatils />}>  </Route> 
-                    <Route path='/nav' element={< User />}>  </Route>                 */}
-                    <User />
+                    <Route path='/nav' element={< User />}>  </Route>                
+                    {/* <User /> */}
                       
                     
-                {/* </Routes> */}
-            {/* </Router> */}
+                </Routes>
+            </Router>
         </div>
     )
 }
