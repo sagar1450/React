@@ -1,0 +1,97 @@
+
+
+.user {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px 320px;
+  }
+  
+  .user td, .user th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .user tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .user tr:hover {background-color: #ddd;}
+  
+  .user th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+  }
+  .btndel{
+      background-color: #DA0037;
+      margin: 6px 6px;
+      
+     
+  }
+  .btnedit{
+      background-color: #003F5C;  
+      margin: 6px 6px;   
+  }
+
+  .btnadd{
+    background-color: #4CAF50;
+    margin-top: 80px;
+  }
+
+  .btndel, .btnedit,.btnadd,.cancelbtn,.submit{
+    border: none;
+     color: white;
+     padding: 8px 18px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 12px;    
+     cursor: pointer; 
+     transition-duration: 0.4s;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     border-radius: 6px;
+  }
+  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:400px;
+    width:500px;
+    border:1px solid black;
+    margin:auto;
+    margin-top:80px;
+    background:white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+  input[type=text]{    
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+    .submit {    
+    background-color: #2F3A8F;
+    margin: 10px 30px;
+   
+  }
+  
+  
+
+  .cancelbtn{
+    background-color: #DA0037;
+    margin: 10px 30px;
+  }
+  
+  html{
+    background: url('images.jpg');
+    background-size: cover;
+  }
+
+ 
+  
